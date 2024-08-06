@@ -1,0 +1,31 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    margin: 1rem 0rem;
+    /* background: white; */
+    background: #1E3263;
+}
+
+.box {
+    /* background: white; */
+    background: #1E3263;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width:23%;
+    margin-top: 0rem;
+    /* color: #1E3263; */
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.box.active {
+    background: white;
+    color: #1E3263;
+}
