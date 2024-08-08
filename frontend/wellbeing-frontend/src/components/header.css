@@ -3,13 +3,22 @@
     justify-content: center;
     height: 5rem;
     margin: 1rem 0rem;
+    /* background: #1E3263; */
+    /* background: #fb923c; */
+    /* background: #15803d; */
+    /* background: #509E45; */
     /* background: white; */
-    background: #1E3263;
+    /* background:#fddf6d; */
+    background: #FD8C2D;
 }
 
 .box {
-    /* background: white; */
-    background: #1E3263;
+    /* background: #1E3263; */
+    /* background: #fb923c; */
+    /* background: #15803d; */
+    /* background: #509E45; */
+    /* background:#fddf6d; */
+    background: #FD8C2D;
     justify-content: center;
     align-items: center;
     text-transform: capitalize;
@@ -27,5 +36,9 @@
 
 .box.active {
     background: white;
-    color: #1E3263;
+    /* color: #1E3263; */
+    /* color: #fb923c; */
+    /* color: #15803d; */
+    /* color: #fddf6d; */
+    color: #FD8C2D;
 }

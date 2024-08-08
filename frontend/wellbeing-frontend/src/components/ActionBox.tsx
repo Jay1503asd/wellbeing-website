@@ -6,11 +6,12 @@ interface ActionBoxProps {
     heading2: string;
     text?: string;
     buttonText: string;
+    color?: string;
 } 
 
-const ActionBox: React.FC<ActionBoxProps> = ({heading1, heading2, text, buttonText}) => {
+const ActionBox: React.FC<ActionBoxProps> = ({heading1, heading2, text, buttonText, color}) => {
     return (
-        <div className="action-box">
+        <div className="action-box" style = {{background: "white"}}>
             <div className="heading1">
                 {heading1}
             </div>

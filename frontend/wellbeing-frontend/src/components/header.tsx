@@ -6,10 +6,11 @@ import {useNavigate} from "react-router-dom";
 interface BoxProps {
   icon: React.ReactElement;
   text: string;
+  page: string;
 }
 
-const Box: React.FC<BoxProps> = ({ icon, text }) => {
-  const [isActive, setIsActive] = useState(false);
+const Box: React.FC<BoxProps> = ({ icon, text, page }) => {
+  const [isActive, setIsActive] = useState(text == page);
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -25,13 +26,13 @@ const Box: React.FC<BoxProps> = ({ icon, text }) => {
   );
 };
 
-const Header: React.FC = () => {
+const Header: React.FC<any> = ({page}) => {
   return (
     <div className="header-container">
-      <Box icon={<Speed />} text="Dashboard" />
-      <Box icon={<Survey />} text="Surveys" />
-      <Box icon={<Profile />} text="Profile" />
-      <Box icon={<Feedback />} text="Feedback" />
+      <Box icon={<Speed />} text="Dashboard" page = {page}/>
+      <Box icon={<Survey />} text="Surveys" page = {page}/>
+      <Box icon={<Profile />} text="Profile" page = {page}/>
+      <Box icon={<Feedback />} text="Feedback" page = {page}/>
     </div>
   );
 };

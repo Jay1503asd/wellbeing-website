@@ -1,12 +1,17 @@
 import React from 'react';
 import "./root.css";
 import Logo from "../../assets/news_93.png"
+import { useNavigate } from 'react-router-dom';
 
 const RootPage: React.FC = () => {
+    const navigate = useNavigate();
+    function handleClick() {
+        navigate("/");
+    }
     return (
         <div className="root-container">
             <div className="header">
-                <img src={Logo} alt="Logo" height = "66px"/>
+                <img src={Logo} alt="Logo" height = "66px" onClick={handleClick} style = {{cursor: "pointer"}}/>
                 <div className="header-links">
                     <div className="header-link">Login</div>
                     <div className="header-link">Register</div>

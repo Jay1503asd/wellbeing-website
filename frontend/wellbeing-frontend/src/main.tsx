@@ -10,6 +10,7 @@ import {
 import RootPage from './pages/root/root'
 import Dashboard from './pages/dashboard/dashboard'
 import './index.css'
+import SurveyHome from './pages/survey/survey';
 const RemoveTrailingSlash = ({ ...rest }) => {
   const location = useLocation();
 
@@ -34,6 +35,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="" element={<RootPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/surveys" element={<SurveyHome />} />
       </Routes>  
     </BrowserRouter>
     

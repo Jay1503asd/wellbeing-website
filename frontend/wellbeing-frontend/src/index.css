@@ -7,7 +7,11 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  background: #1e3263;
+  /* background: #1e3263; */
+  /* background: #fb923c; */
+  /* background: #15803d; */
+  /* background: #42405F; */
+  background: #344D7A;
   color: white;
   border: 0.15rem solid transparent;
   text-transform: capitalize;
@@ -16,7 +20,11 @@ button {
 button:hover { 
   border-width: 0.15rem;
   background-color: #e6e6e6; 
-  border-color: #1e3263;
-  color: #1e3263;
+  /* border-color: #1e3263;
+  color: #1e3263; */
+  /* border-color: #fb923c; */
+  /* border-color: #15803d; */
+  border-color: #42405F;
+  /* color: white; */
   background: none;
 }
