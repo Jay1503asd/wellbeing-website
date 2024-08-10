@@ -1,0 +1,25 @@
+export const depression = [
+    "I like to resolve my conflicts by thinking rationally",
+    "Asking for help from my family and friends is easy for me in kind of situations",
+    "Reaching out to my friends in case of difficulty is easy",
+    "I like to think over and over on the smallest of the issues",
+    "I like to resolve my concerns myself instead of taking help",
+    "I feel guilty for my mistakes",
+    "I feel punished for my doings",
+    "I am critical of myself for my weakness or mistakes",
+    "I think about death without any pain",
+    "I feel irritated on the smallest of things",
+    "I like to overeat in case of stressful situations",
+    "Food is the first thing I would like to avoid eating in case of stress",
+    "I get tired quickly",
+    "I am so worried about my physical problems that I cannot think of anything else",
+    "There's a sudden change in my weight",
+    "I avoid taking showers",
+    "Getting out of bed is the most difficult thing",
+    "I have to push myself very hard to do anything",
+    "Food is the first thing I turn to in case of stress",
+    "I am forgiving of myself for my weakness or mistakes",
+    "I prefer to take help rather than resolving my concerns myself",
+    "Getting out of bed is easy. I find it effortless to get things done."
+  ];
+  
