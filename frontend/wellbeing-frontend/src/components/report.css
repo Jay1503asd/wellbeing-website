@@ -1,0 +1,98 @@
+.report-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #3a4c6b;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.report-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fd8c2d;
+}
+
+.report-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.report-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #3a4c6b;
+  text-transform: capitalize;
+  border-bottom: 2px solid #fd8c2d;
+  padding-bottom: 5px;
+}
+
+.section-summary {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.type-breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.type-section {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+  border: 1px solid #fd8c2d;
+  border-radius: 10px;
+  background-color: #fdf2e3;
+}
+
+.type-title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #3a4c6b;
+}
+
+.type-score {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #fd8c2d;
+}
+
+.type-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.chart-container {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pdf-button:hover {
+  background-color: #0056b3;
+}

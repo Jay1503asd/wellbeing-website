@@ -11,7 +11,8 @@ import RootPage from './pages/root/root'
 import Dashboard from './pages/dashboard/dashboard'
 import './index.css'
 import SurveyHome from './pages/survey/survey';
-import { AngerPage,  AnxietyPage, DepressionPage, EDPage, InternetPage } from './pages/survey/surveyPages';
+import { SurveyParent } from './components/surveyParent'; // Import SurveyParent
+
 const RemoveTrailingSlash = ({ ...rest }) => {
   const location = useLocation();
 
@@ -29,6 +30,7 @@ const RemoveTrailingSlash = ({ ...rest }) => {
       );
   } else return null;
 };
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -37,14 +39,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="" element={<RootPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/surveys" element={<SurveyHome />} />
-        <Route path = "/anger" element={<AngerPage />} />
-        <Route path = "/anxiety" element={<AnxietyPage />} />
-        <Route path = "/depression" element={<DepressionPage />} />
-        <Route path = "/eating-disorder" element={<EDPage />} />
-        <Route path = "/internet" element={<InternetPage />} />
+
+        {/* Use SurveyParent to wrap all survey-related routes */}
+        <Route path="/surveys/*" element={<SurveyParent />} />
+
+        {/* Add any other routes if needed */}
       </Routes>  
     </BrowserRouter>
-    
-
   </React.StrictMode>,
-)
+);

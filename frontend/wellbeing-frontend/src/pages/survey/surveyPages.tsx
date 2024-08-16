@@ -1,54 +1,81 @@
 import React from 'react';
 import Navbar from '../../components/navbar';
 import SurveyPage from '../../components/surveyPage';
-import { anger } from './survey questions/anger';
-import { anxiety } from './survey questions/anxiety';
-import { depression } from './survey questions/depression';
-import { ed } from './survey questions/ed';
-import { internet } from './survey questions/internet';
+import { Question } from './survey questions/anger';
 
-export const AngerPage: React.FC = () => {
+export const AngerPage: React.FC<{ filledQuestions: Question[], setFilledQuestions: (newQuestions: Question[]) => void, handleNavigate: (nextPage: string, index: number) => void }> = ({ filledQuestions, setFilledQuestions, handleNavigate }) => {
     return (
-        <div> 
-            <Navbar />
-            <SurveyPage questions={anger} nextPage = "anxiety"/>
-        </div>
-    )
-}
+    <>
+    <Navbar />
+    <SurveyPage 
+        questions={filledQuestions} 
+        setFilledQuestions={setFilledQuestions} 
+        handleNavigate={handleNavigate} 
+        nextPage="anxiety"
+        backPage="survey"
+    />
+    </>
+    );
+};
 
-export const AnxietyPage: React.FC = () => {
+export const AnxietyPage: React.FC<{ filledQuestions: Question[], setFilledQuestions: (newQuestions: Question[]) => void, handleNavigate: (nextPage: string, index: number) => void }> = ({ filledQuestions, setFilledQuestions, handleNavigate }) => {
     return (
-        <div> 
-            <Navbar />
-            <SurveyPage questions={anxiety} nextPage = "depression"/>
-        </div>
-    )
-}
+    <>
+    <Navbar />
+      <SurveyPage 
+        questions={filledQuestions} 
+        setFilledQuestions={setFilledQuestions} 
+        handleNavigate={handleNavigate} 
+        nextPage="depression"
+        backPage="anger"
+      />
+    </>
+    );
+};
+export const DepressionPage: React.FC<{ filledQuestions: Question[], setFilledQuestions: (newQuestions: Question[]) => void, handleNavigate: (nextPage: string, index: number) => void }> = ({ filledQuestions, setFilledQuestions, handleNavigate }) => {
+    return (
+    <>
+    <Navbar />
+      <SurveyPage 
+        questions={filledQuestions} 
+        setFilledQuestions={setFilledQuestions} 
+        handleNavigate={handleNavigate} 
+        nextPage="eating-disorder"
+        backPage="anxiety"
+      
+      />
+    </>
+    );
+};
 
-export const DepressionPage: React.FC = () => {
+export const EDPage: React.FC<{ filledQuestions: Question[], setFilledQuestions: (newQuestions: Question[]) => void, handleNavigate: (nextPage: string, index: number) => void }> = ({ filledQuestions, setFilledQuestions, handleNavigate }) => {
     return (
-        <div> 
-            <Navbar />
-            <SurveyPage questions={depression} nextPage = "eating-disorder"/>
-        </div>
-    )
-}
+    <>
+    <Navbar />
+      <SurveyPage 
+        questions={filledQuestions} 
+        setFilledQuestions={setFilledQuestions} 
+        handleNavigate={handleNavigate} 
+        nextPage="internet"
+        backPage="depression"
+      />
+    </>
+    );
+};
 
-export const EDPage: React.FC = () => {
+export const InternetPage: React.FC<{ filledQuestions: Question[], setFilledQuestions: (newQuestions: Question[]) => void, handleNavigate: (nextPage: string, index: number) => void }> = ({ filledQuestions, setFilledQuestions, handleNavigate }) => {
     return (
-        <div> 
-            <Navbar />
-            <SurveyPage questions={ed} nextPage = "internet"/>
-        </div>
-    )
-}
+    <>
+    <Navbar />
+      <SurveyPage 
+        questions={filledQuestions} 
+        setFilledQuestions={setFilledQuestions} 
+        handleNavigate={handleNavigate} 
+        nextPage="report"
+        backPage="eating-disorder"
+      />
+    </>
+    );
+};
 
-export const InternetPage: React.FC = () => {
-    return (
-        <div> 
-            <Navbar />
-            <SurveyPage questions={internet} nextPage = "submit"/>
-        </div>
-    )
-}
 
