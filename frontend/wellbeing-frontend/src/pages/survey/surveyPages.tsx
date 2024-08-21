@@ -3,6 +3,21 @@ import Navbar from '../../components/navbar';
 import SurveyPage from '../../components/surveyPage';
 import { Question } from './survey questions/anger';
 
+export const GeneralPage: React.FC<{ filledQuestions: Question[], setFilledQuestions: (newQuestions: Question[]) => void, handleNavigate: (nextPage: string, index: number) => void }> = ({ filledQuestions, setFilledQuestions, handleNavigate }) => {
+  return (
+  <>
+  <Navbar />
+  <SurveyPage 
+      questions={filledQuestions} 
+      setFilledQuestions={setFilledQuestions} 
+      handleNavigate={handleNavigate} 
+      nextPage="anger"
+      backPage=""
+  />
+  </>
+  );
+};
+
 export const AngerPage: React.FC<{ filledQuestions: Question[], setFilledQuestions: (newQuestions: Question[]) => void, handleNavigate: (nextPage: string, index: number) => void }> = ({ filledQuestions, setFilledQuestions, handleNavigate }) => {
     return (
     <>
@@ -12,7 +27,7 @@ export const AngerPage: React.FC<{ filledQuestions: Question[], setFilledQuestio
         setFilledQuestions={setFilledQuestions} 
         handleNavigate={handleNavigate} 
         nextPage="anxiety"
-        backPage="survey"
+        backPage="general"
     />
     </>
     );

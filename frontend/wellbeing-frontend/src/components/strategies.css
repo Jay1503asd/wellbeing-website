@@ -1,0 +1,92 @@
+.strategies-page {
+    margin: 1rem;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #3a4c6b;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.strategies-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fd8c2d;
+}
+
+.strategies-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.strategies-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.development-section {
+    border-left: 5px solid #fd8c2d;
+}
+
+.strength-section {
+    border-left: 5px solid #28a745;
+}
+
+.strategies-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.strategies-section-title {
+    font-size: 2rem;
+    color: #3a4c6b;
+    text-transform: capitalize;
+}
+
+.dropdown-arrow {
+    font-size: 1.5rem;
+    color: #fd8c2d;
+}
+
+.dropdown-arrow.expanded {
+    transform: rotate(180deg);
+}
+
+.strength-message {
+    font-size: 1.2rem;
+    color: #28a745;
+    margin-top: 10px;
+}
+
+.strategies-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.strategy-item {
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #fdf2e3;
+    border: 1px solid #fd8c2d;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #3a4c6b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.strategy-item:last-child {
+    margin-bottom: 0;
+}
+
+.strategy-item:hover {
+    background-color: #fbdcb2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

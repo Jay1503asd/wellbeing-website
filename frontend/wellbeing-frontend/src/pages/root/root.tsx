@@ -13,8 +13,8 @@ const RootPage: React.FC = () => {
             <div className="header">
                 <img src={Logo} alt="Logo" height = "66px" onClick={handleClick} style = {{cursor: "pointer"}}/>
                 <div className="header-links">
-                    <div className="header-link">Login</div>
-                    <div className="header-link">Register</div>
+                    <div className="header-link" onClick = {() => navigate("/login")}>Login</div>
+                    <div className="header-link" onClick = {() => navigate("/register")}>Register</div>
                 </div>
             </div>
             <div className="content">
@@ -27,7 +27,7 @@ const RootPage: React.FC = () => {
                     Your responses are anonymous, so please be open and honest. Your feedback
                     will help create a better environment for everyone.
                 </p>
-                <button>
+                <button onClick={() => navigate("/login")}>
                     Take the Survey
                 </button>
                 <p className = "survey"> What's in the survey </p>

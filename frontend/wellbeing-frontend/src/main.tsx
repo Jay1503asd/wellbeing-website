@@ -12,6 +12,10 @@ import Dashboard from './pages/dashboard/dashboard'
 import './index.css'
 import SurveyHome from './pages/survey/survey';
 import { SurveyParent } from './components/surveyParent'; // Import SurveyParent
+import StrategiesPage from './components/strategies';
+import LoginPage from './pages/auth/login';
+import RegisterPage from './pages/auth/register';
+import ProfilePage from './pages/profile/profile';
 
 const RemoveTrailingSlash = ({ ...rest }) => {
   const location = useLocation();
@@ -39,11 +43,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="" element={<RootPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/surveys" element={<SurveyHome />} />
-
-        {/* Use SurveyParent to wrap all survey-related routes */}
         <Route path="/surveys/*" element={<SurveyParent />} />
-
-        {/* Add any other routes if needed */}
+        <Route path = "/strategies" element={<StrategiesPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path = "/register" element={<RegisterPage />} />
+        <Route path = "/profile" element={<ProfilePage />} />
       </Routes>  
     </BrowserRouter>
   </React.StrictMode>,

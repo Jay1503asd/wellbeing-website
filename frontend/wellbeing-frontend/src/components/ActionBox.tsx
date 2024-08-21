@@ -7,9 +7,10 @@ interface ActionBoxProps {
     text?: string;
     buttonText: string;
     color?: string;
+    onClick?: () => void;
 } 
 
-const ActionBox: React.FC<ActionBoxProps> = ({heading1, heading2, text, buttonText, color}) => {
+const ActionBox: React.FC<ActionBoxProps> = ({heading1, heading2, text, buttonText, color, onClick}) => {
     return (
         <div className="action-box" style = {{background: "white"}}>
             <div className="heading1">
@@ -21,7 +22,7 @@ const ActionBox: React.FC<ActionBoxProps> = ({heading1, heading2, text, buttonTe
             <div className="text">
                 {text ? text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut maximus tellus massa, nec dictum arcu pulvinar ac. Nulla aliquam accumsan rutrum."}
             </div>
-            <button>
+            <button onClick = {onClick}>
                 {buttonText}
             </button>
         </div>
