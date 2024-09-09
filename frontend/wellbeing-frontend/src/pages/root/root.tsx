@@ -9,7 +9,7 @@ const RootPage: React.FC = () => {
         navigate("/");
     }
     return (
-        <div className="root-container">
+        <div className="root-container" >
             <div className="header">
                 <img src={Logo} alt="Logo" height = "66px" onClick={handleClick} style = {{cursor: "pointer"}}/>
                 <div className="header-links">
