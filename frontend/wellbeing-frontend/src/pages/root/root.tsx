@@ -2,6 +2,7 @@ import React from 'react';
 import "./root.css";
 import Logo from "../../assets/news_93.png"
 import { useNavigate } from 'react-router-dom';
+import { FaBrain, FaClipboardList, FaHandsHelping } from 'react-icons/fa';
 
 const RootPage: React.FC = () => {
     const navigate = useNavigate();
@@ -31,20 +32,28 @@ const RootPage: React.FC = () => {
                     Take the Survey
                 </button>
                 <p className = "survey"> What's in the survey </p>
-                <div style = {{display: "flex", justifyContent: "space-between", paddingBottom: "2rem"}}>
-                    <div style = {{display: "flex", flexDirection: "column"}}>
-                        <div className = "circle" />
-                        <p style = {{fontSize: "24px", fontWeight: "500"}}>Feature 1</p>
+                <div className="features">
+                    <div className="feature">
+                        <div className="circle">
+                            <FaBrain className="icon" />
+                        </div>
+                        <p className="feature-title">Assessment</p>
+                        <p className="feature-description">Assessing your mental health</p>
                     </div>
-                    <div style = {{display: "flex", flexDirection: "column"}}>
-                        <div className = "circle" />
-                        <p style = {{fontSize: "24px", fontWeight: "500"}}>Feature 2</p>
+                    <div className="feature">
+                        <div className="circle">
+                            <FaClipboardList className="icon" />
+                        </div>
+                        <p className="feature-title">Report</p>
+                        <p className="feature-description">Detailed report</p>
                     </div>
-                    <div style = {{display: "flex", flexDirection: "column"}}>
-                        <div className = "circle" />
-                        <p style = {{fontSize: "24px", fontWeight: "500"}}>Feature 3</p>
+                    <div className="feature">
+                        <div className="circle">
+                            <FaHandsHelping className="icon" />
+                        </div>
+                        <p className="feature-title">Resources</p>
+                        <p className="feature-description">Resources to seek help</p>
                     </div>
-                    
                 </div>
             </div>
         </div>
