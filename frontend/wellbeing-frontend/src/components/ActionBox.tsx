@@ -19,9 +19,9 @@ const ActionBox: React.FC<ActionBoxProps> = ({heading1, heading2, text, buttonTe
             <div className="heading2">
                 {heading2}
             </div>
-            <div className="text">
+            {/* <div className="text">
                 {text ? text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut maximus tellus massa, nec dictum arcu pulvinar ac. Nulla aliquam accumsan rutrum."}
-            </div>
+            </div> */}
             <button onClick = {onClick}>
                 {buttonText}
             </button>
