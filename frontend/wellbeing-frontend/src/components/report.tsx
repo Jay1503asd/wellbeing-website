@@ -18,7 +18,6 @@ export function calculateTotalResponse(questions: Question[]): number {
     }
     return (sum / (questions.length * 5)) * 100;
 }
-
 // Function to calculate responses for a specific type of question
 export function calculateTypeResponse(questions: Question[], type: string): number {
     const filtered = questions.filter((question: Question) => question.type.includes(type));

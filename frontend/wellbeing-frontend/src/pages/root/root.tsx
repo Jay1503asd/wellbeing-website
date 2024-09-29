@@ -1,23 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./root.css";
-import Logo from "../../assets/news_93.png"
+import Logo from "../../assets/news_93.png";
 import { useNavigate } from 'react-router-dom';
 import { FaBrain, FaClipboardList, FaHandsHelping } from 'react-icons/fa';
 
 const RootPage: React.FC = () => {
     const navigate = useNavigate();
+    const [showDropdown, setShowDropdown] = useState(false);
+
     function handleClick() {
         navigate("/");
     }
+
+    function handleFeelingClick(feeling: string) {
+        console.log(`Feeling: ${feeling}`);
+        navigate("/login");
+    }
+
     return (
-        <div className="root-container" >
+        <div className="root-container">
             <div className="header">
-                <img src={Logo} alt="Logo" height = "66px" onClick={handleClick} style = {{cursor: "pointer"}}/>
+                <img src={Logo} alt="Logo" height="66px" onClick={handleClick} style={{ cursor: "pointer" }} />
                 <div className="header-links">
-                    <div className="header-link" onClick = {() => navigate("/login")}>Login</div>
-                    <div className="header-link" onClick = {() => navigate("/register")}>Register</div>
+                    <div className="header-link" onClick={() => navigate("/login")}>Login</div>
+                    <div className="header-link" onClick={() => navigate("/register")}>Register</div>
                 </div>
             </div>
+
             <div className="content">
                 <p className="title">Your Student Wellbeing Check</p>
                 <p className="description">
@@ -28,10 +37,35 @@ const RootPage: React.FC = () => {
                     Your responses are anonymous, so please be open and honest. Your feedback
                     will help create a better environment for everyone.
                 </p>
-                <button onClick={() => navigate("/login")}>
-                    Take the Survey
+
+                {}
+                <button className="feeling-button" onClick={() => setShowDropdown(!showDropdown)}>
+                    How are you feeling today?
                 </button>
-                <p className = "survey"> What's in the survey </p>
+
+                {}
+                {showDropdown && (
+                    <div className="dropdown">
+                        <button onClick={() => handleFeelingClick("Happy")}>
+                            <span className="emoji">😊</span> Happy
+                        </button>
+                        <button onClick={() => handleFeelingClick("Ecstatic")}>
+                            <span className="emoji">😄</span> Ecstatic
+                        </button>
+                        <button onClick={() => handleFeelingClick("Neutral")}>
+                            <span className="emoji">😐</span> Neutral
+                        </button>
+                        <button onClick={() => handleFeelingClick("Sad")}>
+                            <span className="emoji">😢</span> Sad
+                        </button>
+                        <button onClick={() => handleFeelingClick("Anxious")}>
+                            <span className="emoji">😭</span> Anxious
+                        </button>
+                    </div>
+                )}
+
+                <p className="survey">Ready to go content</p>
+
                 <div className="features">
                     <div className="feature">
                         <div className="circle">
@@ -57,6 +91,7 @@ const RootPage: React.FC = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
+
 export default RootPage;

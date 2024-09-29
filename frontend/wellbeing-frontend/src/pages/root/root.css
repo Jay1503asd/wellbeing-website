@@ -125,3 +125,7 @@
     font-weight: 400;
     text-align: center;
 }
+.dropdown{
+    display: flex;
+    gap: 0.5rem;
+}

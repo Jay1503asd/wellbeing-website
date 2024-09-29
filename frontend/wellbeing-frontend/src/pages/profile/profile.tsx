@@ -6,8 +6,8 @@ import Header from '../../components/header';
 import image from "./image.png"
 
 const ProfilePage = () => {
-    const [name, setName] = useState('John Doe');
-    const [email, setEmail] = useState('johndoe@example.com');
+    const [name, setName] = useState('Jay Doe');
+    const [email, setEmail] = useState('jaydoe@example.com');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const navigate = useNavigate();
