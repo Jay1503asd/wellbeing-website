@@ -127,5 +127,16 @@
 }
 .dropdown{
     display: flex;
-    gap: 0.5rem;
+    margin-top: 2rem;
+    gap: 2rem;
+    justify-content: center;
+}
+.feeling-button{
+    font-size: 18px;
+}
+.emoji{
+    font-size:18px;
+}
+.dropdown-button{
+    width: fit-content;
 }

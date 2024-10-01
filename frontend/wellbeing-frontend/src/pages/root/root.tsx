@@ -12,11 +12,6 @@ const RootPage: React.FC = () => {
         navigate("/");
     }
 
-    function handleFeelingClick(feeling: string) {
-        console.log(`Feeling: ${feeling}`);
-        navigate("/login");
-    }
-
     return (
         <div className="root-container">
             <div className="header">
@@ -28,7 +23,7 @@ const RootPage: React.FC = () => {
             </div>
 
             <div className="content">
-                <p className="title">Your Student Wellbeing Check</p>
+                <p className="title">Student Wellbeing Check</p>
                 <p className="description">
                     We care about your overall wellbeing and want to hear from you. This survey is your
                     chance to share your thoughts and feelings about various aspects of your daily life. You will be asked questions about your school experience, relationships with
@@ -46,20 +41,20 @@ const RootPage: React.FC = () => {
                 {}
                 {showDropdown && (
                     <div className="dropdown">
-                        <button onClick={() => handleFeelingClick("Happy")}>
-                            <span className="emoji">😊</span> Happy
+                        <button className = "dropdown-button" onClick={() => navigate("/login")}>
+                            <span className="emoji">😊 Happy </span>
                         </button>
-                        <button onClick={() => handleFeelingClick("Ecstatic")}>
-                            <span className="emoji">😄</span> Ecstatic
+                        <button className = "dropdown-button" onClick={() => navigate("/login")}>
+                            <span className="emoji">😄 Ecstatic </span>
                         </button>
-                        <button onClick={() => handleFeelingClick("Neutral")}>
-                            <span className="emoji">😐</span> Neutral
+                        <button className = "dropdown-button" onClick={() => navigate("/login")}>
+                            <span className="emoji">😐 Neutral </span>
                         </button>
-                        <button onClick={() => handleFeelingClick("Sad")}>
-                            <span className="emoji">😢</span> Sad
+                        <button className = "dropdown-button" onClick={() => navigate("/login")}>
+                            <span className="emoji">😢 Sad </span>
                         </button>
-                        <button onClick={() => handleFeelingClick("Anxious")}>
-                            <span className="emoji">😭</span> Anxious
+                        <button className = "dropdown-button" onClick={() => navigate("/login")}>
+                            <span className="emoji">😭 Overwhelmed </span>
                         </button>
                     </div>
                 )}
